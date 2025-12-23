@@ -3,6 +3,7 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { usePathname } from 'next/navigation';
 
 const navigation = [
     {name: 'home', href: '/'},
@@ -14,11 +15,14 @@ const navigation = [
 function Header() {
 
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+    const pathname = usePathname
 
 return (
     
     <div className="bg-gray-900">
         <header className="mx-auto container inset-x-0 top-0 z-50 ">
+
+            <p>Current Path: {pathname}</p>
             
             {/* DESKTOP */}
             <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8 uppercase">

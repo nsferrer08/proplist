@@ -3,7 +3,7 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import { useRouter } from 'next/router';
+import { router } from 'next/router'
 
 const navigation = [
     {name: 'home', href: '/'},
@@ -15,8 +15,7 @@ const navigation = [
 function Header() {
 
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-    const router = useRouter
-    const getLink = (path) => `${router.basePath}${path}`;
+    const getLink = router.basePath
 
     console.log(getLink);
 

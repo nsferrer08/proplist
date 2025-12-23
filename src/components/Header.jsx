@@ -15,15 +15,15 @@ const navigation = [
 function Header() {
 
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-    const router = useRouter()
+    const router = useRouter
     const getLink = (path) => `${router.basePath}${path}`;
+
+    console.log(getLink);
 
 return (
     
     <div className="bg-gray-900">
         <header className="mx-auto container inset-x-0 top-0 z-50 ">
-
-            <p>Current Path: {getLink}</p>
             
             {/* DESKTOP */}
             <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8 uppercase">

@@ -3,21 +3,18 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import { router } from 'next/router'
+
 
 const navigation = [
-    {name: 'home', href: '/'},
-    {name: 'about', href: '/about'},
-    {name: 'products', href: '/products'},
-    {name: 'contact', href: '/contact'},
+    {name: 'home', href: '/proplist'},
+    {name: 'about', href: '/proplist/about'},
+    {name: 'products', href: '/proplist/products'},
+    {name: 'contact', href: '/proplist/contact'},
 ] 
 
 function Header() {
 
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-    const getLink = router.basePath
-
-    console.log(getLink);
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
 return (
     

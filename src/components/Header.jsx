@@ -6,10 +6,10 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 
 const navigation = [
-    {name: 'home', href: '/proplist'},
-    {name: 'about', href: '/proplist/about'},
-    {name: 'products', href: '/proplist/products'},
-    {name: 'contact', href: '/proplist/contact'},
+    {name: 'home', href: '/'},
+    {name: 'about', href: '/about'},
+    {name: 'products', href: '/products'},
+    {name: 'contact', href: '/contact'},
 ] 
 
 function Header() {
@@ -46,7 +46,10 @@ return (
                 </div>
                 <div className="hidden lg:flex lg:gap-x-12">
                     {navigation.map((item) => (
-                        <a key={item.name} href={item.href} className="text-sm/6 font-semibold text-white">
+                        <a 
+                            key={item.name} 
+                            href={item.href} 
+                            className="text-sm/6 font-semibold text-white">
                             {item.name}
                         </a>
                     ))}
@@ -81,14 +84,14 @@ return (
                         <div className="-my-6 divide-y divide-white/10">
                             <div className="space-y-2 py-6">
                                 {navigation.map((item) => (
-                                    <Link
+                                    <a
                                         key={item.name}
                                         href={item.href}
                                         className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
                                         onClick={() => setMobileMenuOpen(false)}
                                         >
                                         {item.name}
-                                    </Link>
+                                    </a>
                                 ))}
                             </div>
                             <div className="py-6">
